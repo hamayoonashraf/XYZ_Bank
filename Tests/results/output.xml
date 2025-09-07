@@ -1,0 +1,1818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-09-07T20:10:44.517344" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\Hamayoon\PycharmProjects\XYZ_Bank\tests">
+<suite id="s1-s1" name="Q1 0 Validate all webpages are loaded" source="C:\Users\Hamayoon\PycharmProjects\XYZ_Bank\tests\Q1_0_Validate_all_webpages_are_loaded.robot">
+<test id="s1-s1-t1" name="Validate HomePage is Loaded (TC001)" line="14">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:10:45.282063" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T20:10:45.281667" elapsed="2.259978"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T20:10:47.542009" elapsed="0.134357"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:10:47.676928" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T20:10:47.676639" elapsed="1.449264"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:10:52.127132" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:10:49.126275" elapsed="3.001031"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:10:45.280146" elapsed="6.847292"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${verifyHomePageIsLoaded}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:10:52.128176" elapsed="0.038117"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:10:52.166866" level="INFO">WebPage is loaded successfully</msg>
+<arg>WebPage is loaded successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:10:52.166706" elapsed="0.000222"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T20:10:52.168125" elapsed="2.785156"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:10:52.167447" elapsed="2.786002"/>
+</kw>
+<doc>To Validate "Home Page" is loaded successfully</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-09-07T20:10:45.278291" elapsed="9.675469"/>
+</test>
+<test id="s1-s1-t2" name="Validate Successful login as Bank Manager (TC002)" line="20">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:10:54.956054" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T20:10:54.955884" elapsed="2.451072"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T20:10:57.407279" elapsed="0.219157"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:10:57.627048" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T20:10:57.626759" elapsed="1.486685"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:11:02.117453" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:10:59.113752" elapsed="3.003886"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:10:54.955543" elapsed="7.162286"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:02.179692" level="INFO">Clicking element 'css:button[ng-click='manager()']'.</msg>
+<arg>${bankManager_login_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:11:02.179148" elapsed="0.241276"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${verifyHomePageIsLoaded}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:11:02.429625" elapsed="0.055637"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_addCustomer_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:11:02.507702" elapsed="0.348680"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:11:02.858181" level="INFO">WebPage is loaded successfully</msg>
+<arg>WebPage is loaded successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:11:02.857883" elapsed="0.000424"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T20:11:02.862273" elapsed="3.524424"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:11:02.861723" elapsed="3.525202"/>
+</kw>
+<doc>To Validate "Bank Manager" logged-in successfully</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-09-07T20:10:54.954770" elapsed="11.450175"/>
+</test>
+<test id="s1-s1-t3" name="Validate Customer Tab is loaded as Bank Manager (TC003)" line="28">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:06.442548" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T20:11:06.442300" elapsed="2.705118"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T20:11:09.147707" elapsed="0.216902"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:09.365217" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T20:11:09.364931" elapsed="0.720687"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:11:13.087068" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:11:10.085971" elapsed="3.001610"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:11:06.441792" elapsed="6.646330"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:13.090490" level="INFO">Clicking element 'css:button[ng-click='manager()']'.</msg>
+<arg>${bankManager_login_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:11:13.089532" elapsed="0.172341"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${verifyHomePageIsLoaded}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:11:13.262554" elapsed="0.038059"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_showCustomers_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:11:13.301066" elapsed="0.244863"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:13.546680" level="INFO">Clicking element 'css:button[ng-click='showCust()']'.</msg>
+<arg>${bankManager_showCustomers_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:11:13.546429" elapsed="0.113008"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_custDetail_tbl}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:11:13.660459" elapsed="0.318915"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:11:13.979979" level="INFO">WebPage is loaded successfully</msg>
+<arg>WebPage is loaded successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:11:13.979814" elapsed="0.000225"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T20:11:13.980810" elapsed="2.288586"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:11:13.980510" elapsed="2.289084"/>
+</kw>
+<doc>To Validate "Customer Tab" screen loaded successfully</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-09-07T20:11:06.440607" elapsed="9.831539"/>
+</test>
+<test id="s1-s1-t4" name="Validate Customer Login page is loaded (TC004)" line="38">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:16.275170" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T20:11:16.274937" elapsed="2.069613"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T20:11:18.344880" elapsed="0.113458"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:18.459154" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T20:11:18.458648" elapsed="0.819339"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:11:22.278923" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:11:19.278295" elapsed="3.000815"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:11:16.274319" elapsed="6.004977"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${verifyHomePageIsLoaded}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:11:22.280069" elapsed="0.042134"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Customer_login_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:11:22.322717" elapsed="0.029172"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:22.352858" level="INFO">Clicking element 'css:button[ng-click='customer()']'.</msg>
+<arg>${Customer_login_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:11:22.352425" elapsed="0.139167"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankCustomer_selectUser_dropdown}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:11:22.492029" elapsed="0.306617"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:22.825664" level="INFO">Current page contains text 'Your Name :'.</msg>
+<arg>Your Name :</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-07T20:11:22.799185" elapsed="0.026582"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:11:22.826521" level="INFO">WebPage is loaded successfully</msg>
+<arg>WebPage is loaded successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:11:22.826289" elapsed="0.000342"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T20:11:22.831813" elapsed="2.287217"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:11:22.831211" elapsed="2.288683"/>
+</kw>
+<doc>To Validate "Customer Login" screen loaded successfully</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-09-07T20:11:16.273108" elapsed="8.848101"/>
+</test>
+<doc>To validate all webpages are loaded for smoke test</doc>
+<status status="PASS" start="2025-09-07T20:10:44.577159" elapsed="40.549439"/>
+</suite>
+<suite id="s1-s2" name="Q1 1 Create customers as bank manager" source="C:\Users\Hamayoon\PycharmProjects\XYZ_Bank\tests\Q1_1_Create_customers_as_bank_manager.robot">
+<test id="s1-s2-t1" name="Enter First Customer" line="17">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:25.165355" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T20:11:25.164997" elapsed="1.989359"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T20:11:27.154677" elapsed="0.113630"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:27.268871" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T20:11:27.268592" elapsed="0.783658"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:11:31.053259" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:11:28.052453" elapsed="3.000974"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:11:25.164552" elapsed="5.889060"/>
+</kw>
+<kw name="Fill in the Customers Details and Verify">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:31.055307" level="INFO">Clicking element 'css:button[ng-click='manager()']'.</msg>
+<arg>${bankManager_login_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:11:31.054995" elapsed="0.131820"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${verifyHomePageIsLoaded}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:11:31.186999" elapsed="0.038240"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_addCustomer_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:11:31.225433" elapsed="0.251410"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:31.477263" level="INFO">Clicking element 'css:button[ng-click='addCust()']'.</msg>
+<arg>${bankManager_addCustomer_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:11:31.477027" elapsed="0.111358"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:11:36.594502" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:11:31.589226" elapsed="5.005461"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:36.595738" level="INFO">Typing text 'Christopher' into text field 'css:input[ng-model='fName']'.</msg>
+<arg>${bankManager_firstName_txt}</arg>
+<arg>${firstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:11:36.595087" elapsed="0.309029"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:36.904865" level="INFO">Typing text 'Connely' into text field 'css:input[ng-model='lName']'.</msg>
+<arg>${bankManager_lastName_txt}</arg>
+<arg>${lastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:11:36.904414" elapsed="0.544497"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:37.449755" level="INFO">Typing text 'L789C349' into text field 'css:input[ng-model='postCd']'.</msg>
+<arg>${bankManager_postCode_txt}</arg>
+<arg>${postCode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:11:37.449239" elapsed="0.333165"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:37.783191" level="INFO">Clicking button 'css:.btn.btn-default'.</msg>
+<arg>${bankManager_addCust_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:11:37.782735" elapsed="0.363200"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:11:43.146952" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:11:38.146225" elapsed="5.000896"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:43.147623" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-07T20:11:43.155599" level="INFO">${result} = Customer added successfully with customer id :6</msg>
+<var>${result}</var>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-09-07T20:11:43.147392" elapsed="0.008306"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:11:43.156752" level="INFO">Customer added successfully with customer id :6</msg>
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:11:43.156280" elapsed="0.000604"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Customer added successfully</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-09-07T20:11:43.157674" elapsed="0.000524"/>
+</kw>
+<arg>Christopher</arg>
+<arg>Connely</arg>
+<arg>L789C349</arg>
+<tag>Regression</tag>
+<doc>To enter multiple customers as "Bank Manager"</doc>
+<status status="PASS" start="2025-09-07T20:11:31.054484" elapsed="12.103961"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T20:11:43.162737" elapsed="2.416100"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:11:43.162052" elapsed="2.417137"/>
+</kw>
+<tag>Regression</tag>
+<status status="PASS" start="2025-09-07T20:11:25.163406" elapsed="20.416494"/>
+</test>
+<test id="s1-s2-t2" name="Enter Second Customer" line="18">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:45.585000" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T20:11:45.584611" elapsed="1.985564"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T20:11:47.570511" elapsed="0.134217"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:47.705385" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T20:11:47.705088" elapsed="0.789090"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:11:51.495995" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:11:48.494493" elapsed="3.001974"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:11:45.583784" elapsed="5.913142"/>
+</kw>
+<kw name="Fill in the Customers Details and Verify">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:51.502477" level="INFO">Clicking element 'css:button[ng-click='manager()']'.</msg>
+<arg>${bankManager_login_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:11:51.501416" elapsed="0.168818"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${verifyHomePageIsLoaded}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:11:51.670550" elapsed="0.042782"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_addCustomer_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:11:51.713537" elapsed="0.241648"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:51.955621" level="INFO">Clicking element 'css:button[ng-click='addCust()']'.</msg>
+<arg>${bankManager_addCustomer_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:11:51.955381" elapsed="0.105110"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:11:57.062315" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:11:52.061047" elapsed="5.001542"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:57.063883" level="INFO">Typing text 'Frank' into text field 'css:input[ng-model='fName']'.</msg>
+<arg>${bankManager_firstName_txt}</arg>
+<arg>${firstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:11:57.063224" elapsed="0.365262"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:57.429337" level="INFO">Typing text 'Connely' into text field 'css:input[ng-model='lName']'.</msg>
+<arg>${bankManager_lastName_txt}</arg>
+<arg>${lastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:11:57.428828" elapsed="0.501771"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:57.931400" level="INFO">Typing text 'A897N450' into text field 'css:input[ng-model='postCd']'.</msg>
+<arg>${bankManager_postCode_txt}</arg>
+<arg>${postCode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:11:57.930915" elapsed="0.221052"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:11:58.152707" level="INFO">Clicking button 'css:.btn.btn-default'.</msg>
+<arg>${bankManager_addCust_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:11:58.152259" elapsed="0.242865"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:12:03.396442" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:11:58.395427" elapsed="5.001613"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:03.398245" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-07T20:12:03.418767" level="INFO">${result} = Customer added successfully with customer id :6</msg>
+<var>${result}</var>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-09-07T20:12:03.397597" elapsed="0.021410"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:12:03.421468" level="INFO">Customer added successfully with customer id :6</msg>
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:12:03.419899" elapsed="0.001919"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Customer added successfully</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-09-07T20:12:03.422789" elapsed="0.001661"/>
+</kw>
+<arg>Frank</arg>
+<arg>Connely</arg>
+<arg>A897N450</arg>
+<tag>Regression</tag>
+<doc>To enter multiple customers as "Bank Manager"</doc>
+<status status="PASS" start="2025-09-07T20:11:51.498917" elapsed="11.926311"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T20:12:03.435675" elapsed="2.322822"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:12:03.432980" elapsed="2.325845"/>
+</kw>
+<tag>Regression</tag>
+<status status="PASS" start="2025-09-07T20:11:45.582288" elapsed="20.177175"/>
+</test>
+<test id="s1-s2-t3" name="Enter Third Customer" line="19">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:05.767231" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T20:12:05.766685" elapsed="1.933546"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T20:12:07.700533" elapsed="0.123361"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:07.824514" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T20:12:07.824191" elapsed="0.740369"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:12:11.565753" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:12:08.565078" elapsed="3.000804"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:12:05.765518" elapsed="5.800478"/>
+</kw>
+<kw name="Fill in the Customers Details and Verify">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:11.567039" level="INFO">Clicking element 'css:button[ng-click='manager()']'.</msg>
+<arg>${bankManager_login_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:12:11.566823" elapsed="0.136989"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${verifyHomePageIsLoaded}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:12:11.704149" elapsed="0.036802"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_addCustomer_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:12:11.741139" elapsed="0.268725"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:12.010306" level="INFO">Clicking element 'css:button[ng-click='addCust()']'.</msg>
+<arg>${bankManager_addCustomer_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:12:12.010060" elapsed="0.111682"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:12:17.123138" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:12:12.122449" elapsed="5.001152"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:17.124307" level="INFO">Typing text 'Christopher' into text field 'css:input[ng-model='fName']'.</msg>
+<arg>${bankManager_firstName_txt}</arg>
+<arg>${firstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:12:17.123868" elapsed="0.492708"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:17.617336" level="INFO">Typing text 'Minka' into text field 'css:input[ng-model='lName']'.</msg>
+<arg>${bankManager_lastName_txt}</arg>
+<arg>${lastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:12:17.616887" elapsed="0.305929"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:17.923606" level="INFO">Typing text 'M098Q585' into text field 'css:input[ng-model='postCd']'.</msg>
+<arg>${bankManager_postCode_txt}</arg>
+<arg>${postCode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:12:17.923147" elapsed="0.480514"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:18.404362" level="INFO">Clicking button 'css:.btn.btn-default'.</msg>
+<arg>${bankManager_addCust_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:12:18.403973" elapsed="0.279846"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:12:23.685017" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:12:18.684085" elapsed="5.001177"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:23.686076" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-07T20:12:23.703431" level="INFO">${result} = Customer added successfully with customer id :6</msg>
+<var>${result}</var>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-09-07T20:12:23.685675" elapsed="0.017960"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:12:23.705030" level="INFO">Customer added successfully with customer id :6</msg>
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:12:23.704318" elapsed="0.003564"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Customer added successfully</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-09-07T20:12:23.710394" elapsed="0.002076"/>
+</kw>
+<arg>Christopher</arg>
+<arg>Minka</arg>
+<arg>M098Q585</arg>
+<tag>Regression</tag>
+<doc>To enter multiple customers as "Bank Manager"</doc>
+<status status="PASS" start="2025-09-07T20:12:11.566474" elapsed="12.148635"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T20:12:23.723312" elapsed="2.345190"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:12:23.721486" elapsed="2.348062"/>
+</kw>
+<tag>Regression</tag>
+<status status="PASS" start="2025-09-07T20:12:05.763108" elapsed="20.307876"/>
+</test>
+<test id="s1-s2-t4" name="Enter Fourth Customer" line="20">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:26.082169" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T20:12:26.080781" elapsed="1.948594"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T20:12:28.029718" elapsed="0.184297"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:28.214651" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T20:12:28.214334" elapsed="1.129870"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:12:32.345386" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:12:29.344446" elapsed="3.001317"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:12:26.079083" elapsed="6.267056"/>
+</kw>
+<kw name="Fill in the Customers Details and Verify">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:32.350243" level="INFO">Clicking element 'css:button[ng-click='manager()']'.</msg>
+<arg>${bankManager_login_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:12:32.349458" elapsed="0.151268"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${verifyHomePageIsLoaded}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:12:32.500921" elapsed="0.037015"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_addCustomer_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:12:32.538389" elapsed="0.245028"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:32.783841" level="INFO">Clicking element 'css:button[ng-click='addCust()']'.</msg>
+<arg>${bankManager_addCustomer_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:12:32.783604" elapsed="0.114990"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:12:37.901361" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:12:32.898773" elapsed="5.002827"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:37.902526" level="INFO">Typing text 'Connely' into text field 'css:input[ng-model='fName']'.</msg>
+<arg>${bankManager_firstName_txt}</arg>
+<arg>${firstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:12:37.901937" elapsed="0.392104"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:38.295113" level="INFO">Typing text 'Jackson' into text field 'css:input[ng-model='lName']'.</msg>
+<arg>${bankManager_lastName_txt}</arg>
+<arg>${lastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:12:38.294535" elapsed="0.407485"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:38.702849" level="INFO">Typing text 'L789C349' into text field 'css:input[ng-model='postCd']'.</msg>
+<arg>${bankManager_postCode_txt}</arg>
+<arg>${postCode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:12:38.702325" elapsed="0.474309"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:39.177430" level="INFO">Clicking button 'css:.btn.btn-default'.</msg>
+<arg>${bankManager_addCust_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:12:39.176962" elapsed="0.490858"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:12:44.668674" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:12:39.668128" elapsed="5.000771"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:44.669592" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-07T20:12:44.688626" level="INFO">${result} = Customer added successfully with customer id :6</msg>
+<var>${result}</var>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-09-07T20:12:44.669270" elapsed="0.019453"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:12:44.689413" level="INFO">Customer added successfully with customer id :6</msg>
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:12:44.689049" elapsed="0.000497"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Customer added successfully</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-09-07T20:12:44.689956" elapsed="0.000638"/>
+</kw>
+<arg>Connely</arg>
+<arg>Jackson</arg>
+<arg>L789C349</arg>
+<tag>Regression</tag>
+<doc>To enter multiple customers as "Bank Manager"</doc>
+<status status="PASS" start="2025-09-07T20:12:32.348048" elapsed="12.342818"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T20:12:44.694333" elapsed="2.313232"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:12:44.691791" elapsed="2.316743"/>
+</kw>
+<tag>Regression</tag>
+<status status="PASS" start="2025-09-07T20:12:26.075681" elapsed="20.935505"/>
+</test>
+<test id="s1-s2-t5" name="Enter Fifth Customer" line="21">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:47.014685" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T20:12:47.014498" elapsed="1.961512"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T20:12:48.976424" elapsed="0.118291"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:49.095502" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T20:12:49.095189" elapsed="1.142655"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:12:53.239272" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:12:50.238167" elapsed="3.001657"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:12:47.014045" elapsed="6.226648"/>
+</kw>
+<kw name="Fill in the Customers Details and Verify">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:53.247082" level="INFO">Clicking element 'css:button[ng-click='manager()']'.</msg>
+<arg>${bankManager_login_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:12:53.245440" elapsed="0.149908"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${verifyHomePageIsLoaded}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:12:53.395595" elapsed="0.042676"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_addCustomer_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:12:53.438570" elapsed="0.250206"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:53.689208" level="INFO">Clicking element 'css:button[ng-click='addCust()']'.</msg>
+<arg>${bankManager_addCustomer_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:12:53.688968" elapsed="0.111916"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:12:58.801770" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:12:53.801142" elapsed="5.000818"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:58.802727" level="INFO">Typing text 'Jackson' into text field 'css:input[ng-model='fName']'.</msg>
+<arg>${bankManager_firstName_txt}</arg>
+<arg>${firstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:12:58.802237" elapsed="0.466273"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:59.269414" level="INFO">Typing text 'Frank' into text field 'css:input[ng-model='lName']'.</msg>
+<arg>${bankManager_lastName_txt}</arg>
+<arg>${lastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:12:59.268903" elapsed="0.546293"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:12:59.816389" level="INFO">Typing text 'L789C349' into text field 'css:input[ng-model='postCd']'.</msg>
+<arg>${bankManager_postCode_txt}</arg>
+<arg>${postCode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:12:59.815496" elapsed="0.367133"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:00.183593" level="INFO">Clicking button 'css:.btn.btn-default'.</msg>
+<arg>${bankManager_addCust_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:13:00.182953" elapsed="0.227314"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:13:05.411456" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:13:00.410666" elapsed="5.000960"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:05.412129" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-07T20:13:05.427995" level="INFO">${result} = Customer added successfully with customer id :6</msg>
+<var>${result}</var>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-09-07T20:13:05.411888" elapsed="0.016265"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:13:05.429106" level="INFO">Customer added successfully with customer id :6</msg>
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:13:05.428634" elapsed="0.000646"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Customer added successfully</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-09-07T20:13:05.429672" elapsed="0.000860"/>
+</kw>
+<arg>Jackson</arg>
+<arg>Frank</arg>
+<arg>L789C349</arg>
+<tag>Regression</tag>
+<doc>To enter multiple customers as "Bank Manager"</doc>
+<status status="PASS" start="2025-09-07T20:12:53.242822" elapsed="12.188027"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T20:13:05.434045" elapsed="2.331131"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:13:05.432486" elapsed="2.333136"/>
+</kw>
+<tag>Regression</tag>
+<status status="PASS" start="2025-09-07T20:12:47.012831" elapsed="20.753478"/>
+</test>
+<test id="s1-s2-t6" name="Enter Sixth Customer" line="22">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:07.770681" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T20:13:07.770297" elapsed="1.922139"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T20:13:09.693641" elapsed="0.102760"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:09.796979" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T20:13:09.796689" elapsed="0.795457"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:13:13.593079" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:13:10.592460" elapsed="3.000976"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:13:07.769450" elapsed="5.824370"/>
+</kw>
+<kw name="Fill in the Customers Details and Verify">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:13.598390" level="INFO">Clicking element 'css:button[ng-click='manager()']'.</msg>
+<arg>${bankManager_login_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:13:13.597084" elapsed="0.148984"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${verifyHomePageIsLoaded}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:13:13.746358" elapsed="0.043224"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_addCustomer_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:13:13.789851" elapsed="0.246454"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:14.036755" level="INFO">Clicking element 'css:button[ng-click='addCust()']'.</msg>
+<arg>${bankManager_addCustomer_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:13:14.036513" elapsed="0.116514"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:13:19.154882" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:13:14.153348" elapsed="5.001828"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:19.156186" level="INFO">Typing text 'Minka' into text field 'css:input[ng-model='fName']'.</msg>
+<arg>${bankManager_firstName_txt}</arg>
+<arg>${firstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:13:19.155514" elapsed="0.307923"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:19.464165" level="INFO">Typing text 'Jackson' into text field 'css:input[ng-model='lName']'.</msg>
+<arg>${bankManager_lastName_txt}</arg>
+<arg>${lastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:13:19.463738" elapsed="0.533621"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:19.998190" level="INFO">Typing text 'A897N450' into text field 'css:input[ng-model='postCd']'.</msg>
+<arg>${bankManager_postCode_txt}</arg>
+<arg>${postCode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:13:19.997693" elapsed="0.304845"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:20.303589" level="INFO">Clicking button 'css:.btn.btn-default'.</msg>
+<arg>${bankManager_addCust_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:13:20.302843" elapsed="0.295382"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:13:25.599405" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:13:20.598520" elapsed="5.001455"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:25.601533" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-07T20:13:25.642858" level="INFO">${result} = Customer added successfully with customer id :6</msg>
+<var>${result}</var>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-09-07T20:13:25.600836" elapsed="0.042684"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:13:25.645857" level="INFO">Customer added successfully with customer id :6</msg>
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:13:25.644882" elapsed="0.001292"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Customer added successfully</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-09-07T20:13:25.647047" elapsed="0.000988"/>
+</kw>
+<arg>Minka</arg>
+<arg>Jackson</arg>
+<arg>A897N450</arg>
+<tag>Regression</tag>
+<doc>To enter multiple customers as "Bank Manager"</doc>
+<status status="PASS" start="2025-09-07T20:13:13.595532" elapsed="12.052900"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T20:13:25.652089" elapsed="2.301622"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:13:25.650768" elapsed="2.303900"/>
+</kw>
+<tag>Regression</tag>
+<status status="PASS" start="2025-09-07T20:13:07.768175" elapsed="20.188008"/>
+</test>
+<test id="s1-s2-t7" name="Enter Seventh Customer" line="23">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:27.966974" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T20:13:27.966123" elapsed="1.961144"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T20:13:29.927648" elapsed="0.083536"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:30.011758" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T20:13:30.011469" elapsed="1.191120"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:13:34.203468" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:13:31.202897" elapsed="3.000736"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:13:27.964350" elapsed="6.239424"/>
+</kw>
+<kw name="Fill in the Customers Details and Verify">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:34.205461" level="INFO">Clicking element 'css:button[ng-click='manager()']'.</msg>
+<arg>${bankManager_login_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:13:34.205120" elapsed="0.129165"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${verifyHomePageIsLoaded}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:13:34.334582" elapsed="0.035496"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_addCustomer_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:13:34.370426" elapsed="0.247380"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:34.618282" level="INFO">Clicking element 'css:button[ng-click='addCust()']'.</msg>
+<arg>${bankManager_addCustomer_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:13:34.618010" elapsed="0.111028"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:13:39.730717" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:13:34.729501" elapsed="5.001417"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:39.731680" level="INFO">Typing text 'Jackson' into text field 'css:input[ng-model='fName']'.</msg>
+<arg>${bankManager_firstName_txt}</arg>
+<arg>${firstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:13:39.731202" elapsed="0.385433"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:40.117382" level="INFO">Typing text 'Connely' into text field 'css:input[ng-model='lName']'.</msg>
+<arg>${bankManager_lastName_txt}</arg>
+<arg>${lastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:13:40.116930" elapsed="0.462329"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:40.580062" level="INFO">Typing text 'L789C349' into text field 'css:input[ng-model='postCd']'.</msg>
+<arg>${bankManager_postCode_txt}</arg>
+<arg>${postCode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:13:40.579558" elapsed="0.385056"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:40.966916" level="INFO">Clicking button 'css:.btn.btn-default'.</msg>
+<arg>${bankManager_addCust_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:13:40.965484" elapsed="0.255130"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:13:46.221613" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:13:41.220929" elapsed="5.000828"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:46.222135" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-07T20:13:46.230107" level="INFO">${result} = Customer added successfully with customer id :6</msg>
+<var>${result}</var>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-09-07T20:13:46.221946" elapsed="0.008254"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:13:46.231119" level="INFO">Customer added successfully with customer id :6</msg>
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:13:46.230699" elapsed="0.000549"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Customer added successfully</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-09-07T20:13:46.231866" elapsed="0.000700"/>
+</kw>
+<arg>Jackson</arg>
+<arg>Connely</arg>
+<arg>L789C349</arg>
+<tag>Regression</tag>
+<doc>To enter multiple customers as "Bank Manager"</doc>
+<status status="PASS" start="2025-09-07T20:13:34.204482" elapsed="12.028578"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T20:13:46.235039" elapsed="2.314222"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:13:46.234426" elapsed="2.315153"/>
+</kw>
+<tag>Regression</tag>
+<status status="PASS" start="2025-09-07T20:13:27.960844" elapsed="20.589224"/>
+</test>
+<doc>To add customer data as "BankManager"</doc>
+<status status="PASS" start="2025-09-07T20:11:25.133640" elapsed="143.418200"/>
+</suite>
+<suite id="s1-s3" name="Q1 2 Delete customers as bank manager" source="C:\Users\Hamayoon\PycharmProjects\XYZ_Bank\tests\Q1_2_Delete_customers_as_bank_manager.robot">
+<test id="s1-s3-t1" name="Validate customers details are deleted (TC001)" line="14">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:48.576011" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T20:13:48.575854" elapsed="1.963742"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T20:13:50.539924" elapsed="0.129187"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:50.669670" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T20:13:50.669403" elapsed="1.138701"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:13:54.809495" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:13:51.808383" elapsed="3.001619"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:13:48.575502" elapsed="6.234958"/>
+</kw>
+<kw name="Login and navigate to customer display page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:54.813201" level="INFO">Clicking element 'css:button[ng-click='manager()']'.</msg>
+<arg>${bankManager_login_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:13:54.812597" elapsed="0.144513"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_showCustomers_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:13:54.957425" elapsed="0.296212"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:55.254073" level="INFO">Clicking element 'css:button[ng-click='showCust()']'.</msg>
+<arg>${bankManager_showCustomers_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:13:55.253832" elapsed="0.113859"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_custDetail_tbl}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:13:55.368137" elapsed="0.312736"/>
+</kw>
+<doc>To Navigate to customer display page as "Bank Manager"</doc>
+<status status="PASS" start="2025-09-07T20:13:54.811751" elapsed="0.869300"/>
+</kw>
+<kw name="Search and delete customer details">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_searchCust_txt}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:13:55.682132" elapsed="0.039380"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_custDetail_tbl}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:13:55.721948" elapsed="0.029894"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:55.752682" level="INFO">Typing text 'Hermoine' into text field 'css:input[ng-model='searchCustomer']'.</msg>
+<arg>${bankManager_searchCust_txt}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:13:55.752409" elapsed="0.194264"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:13:56.947765" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:13:55.946921" elapsed="1.001199"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:56.989614" level="INFO">Current page contains text 'Hermoine'.</msg>
+<arg>${name}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-07T20:13:56.949492" elapsed="0.040440"/>
+</kw>
+<msg time="2025-09-07T20:13:56.990188" level="INFO">${found} = True</msg>
+<var>${found}</var>
+<arg>Page Should Contain</arg>
+<arg>${name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-09-07T20:13:56.948782" elapsed="0.041449"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${found}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2025-09-07T20:13:56.990430" elapsed="0.000418"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:13:56.991225" level="INFO">Clicking button 'css:button[ng-click='deleteCust(cust)']'.</msg>
+<arg>${bankManager_deleteCust_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:13:56.990998" elapsed="0.154730"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:14:00.146843" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:13:57.146048" elapsed="3.001944"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${bankManager_searchCust_txt}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:00.148404" elapsed="0.106008"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:14:01.255214" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:14:00.254782" elapsed="1.000625"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:14:01.256111" level="INFO">customer deleted successfully Hermoine</msg>
+<arg>customer deleted successfully ${name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:14:01.255747" elapsed="0.000543"/>
+</kw>
+<var name="${name}">Hermoine</var>
+<status status="PASS" start="2025-09-07T20:13:55.752244" elapsed="5.504156"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:01.257473" level="INFO">Typing text 'Harry' into text field 'css:input[ng-model='searchCustomer']'.</msg>
+<arg>${bankManager_searchCust_txt}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:01.256975" elapsed="0.268542"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:14:02.526880" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:14:01.525827" elapsed="1.001685"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:02.591239" level="INFO">Current page contains text 'Harry'.</msg>
+<arg>${name}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-07T20:14:02.529026" elapsed="0.062366"/>
+</kw>
+<msg time="2025-09-07T20:14:02.591623" level="INFO">${found} = True</msg>
+<var>${found}</var>
+<arg>Page Should Contain</arg>
+<arg>${name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-09-07T20:14:02.528247" elapsed="0.063426"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${found}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2025-09-07T20:14:02.591915" elapsed="0.000447"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:02.592885" level="INFO">Clicking button 'css:button[ng-click='deleteCust(cust)']'.</msg>
+<arg>${bankManager_deleteCust_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:02.592573" elapsed="0.133589"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:14:05.727488" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:14:02.726371" elapsed="3.001680"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${bankManager_searchCust_txt}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:05.729410" elapsed="0.093235"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:14:06.823400" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:14:05.822829" elapsed="1.000808"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:14:06.824527" level="INFO">customer deleted successfully Harry</msg>
+<arg>customer deleted successfully ${name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:14:06.824102" elapsed="0.000559"/>
+</kw>
+<var name="${name}">Harry</var>
+<status status="PASS" start="2025-09-07T20:14:01.256743" elapsed="5.568050"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:06.826972" level="INFO">Typing text 'Christopher' into text field 'css:input[ng-model='searchCustomer']'.</msg>
+<arg>${bankManager_searchCust_txt}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:06.826163" elapsed="0.163037"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:14:07.990426" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:14:06.989486" elapsed="1.001514"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:08.233737" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-07T20:14:08.233945" level="FAIL">Page should have contained text 'Christopher' but did not.</msg>
+<arg>${name}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-09-07T20:14:07.992312" elapsed="0.245084">Page should have contained text 'Christopher' but did not.</status>
+</kw>
+<msg time="2025-09-07T20:14:08.237640" level="INFO">${found} = False</msg>
+<var>${found}</var>
+<arg>Page Should Contain</arg>
+<arg>${name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-09-07T20:14:07.991708" elapsed="0.245968"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<msg time="2025-09-07T20:14:08.238119" level="INFO">Exiting for loop altogether.</msg>
+<arg>'${found}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2025-09-07T20:14:08.237824" elapsed="0.000375"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${bankManager_deleteCust_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-09-07T20:14:08.238330" elapsed="0.000035"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-09-07T20:14:08.238463" elapsed="0.000030"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${bankManager_searchCust_txt}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-09-07T20:14:08.238596" elapsed="0.000028"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-09-07T20:14:08.238732" elapsed="0.000031"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>customer deleted successfully ${name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-07T20:14:08.238865" elapsed="0.000032"/>
+</kw>
+<var name="${name}">Christopher</var>
+<status status="PASS" start="2025-09-07T20:14:06.825611" elapsed="1.413340"/>
+</iter>
+<var>${name}</var>
+<value>Hermoine</value>
+<value>Harry</value>
+<value>Christopher</value>
+<status status="PASS" start="2025-09-07T20:13:55.751971" elapsed="12.487057"/>
+</for>
+<doc>To delete customers data</doc>
+<status status="PASS" start="2025-09-07T20:13:55.681620" elapsed="12.557535"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T20:14:08.239996" elapsed="2.303248"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:14:08.239721" elapsed="2.304167"/>
+</kw>
+<doc>Test case is to delete customer data</doc>
+<tag>Regression</tag>
+<status status="PASS" start="2025-09-07T20:13:48.574764" elapsed="21.970521"/>
+</test>
+<doc>To delete customer data as "BankManager"</doc>
+<status status="PASS" start="2025-09-07T20:13:48.554138" elapsed="21.996285"/>
+</suite>
+<suite id="s1-s4" name="Q2 Login as user and perform transactions" source="C:\Users\Hamayoon\PycharmProjects\XYZ_Bank\tests\Q2_Login_as_user_and_perform_transactions.robot">
+<test id="s1-s4-t1" name="User login and perform Debit/Credit Account (TC001)" line="15">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:10.587415" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T20:14:10.587170" elapsed="1.932052"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T20:14:12.519562" elapsed="0.084122"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:12.604435" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T20:14:12.604023" elapsed="0.778949"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:14:16.384035" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:14:13.383380" elapsed="3.000804"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:14:10.586466" elapsed="5.797840"/>
+</kw>
+<kw name="Select user and login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${verifyHomePageIsLoaded}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:14:16.385343" elapsed="0.037490"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Customer_login_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:14:16.423029" elapsed="0.027278"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:16.450751" level="INFO">Clicking element 'css:button[ng-click='customer()']'.</msg>
+<arg>${Customer_login_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:16.450505" elapsed="0.119198"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankCustomer_selectUser_dropdown}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:14:16.569900" elapsed="0.271393"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:16.841797" level="INFO">Selecting options from selection list 'css:select[ng-model='custId']' by label Hermoine Granger.</msg>
+<arg>${bankCustomer_selectUser_dropdown}</arg>
+<arg>${user}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-09-07T20:14:16.841495" elapsed="0.182598"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:14:17.024666" level="INFO">Hermoine Granger</msg>
+<arg>${user}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:14:17.024382" elapsed="0.000414"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankCustomer_custLogin_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:14:17.024975" elapsed="0.043526"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:17.069176" level="INFO">Clicking element 'css:.btn.btn-default'.</msg>
+<arg>${bankCustomer_custLogin_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:17.068792" elapsed="0.128939"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankCustomer_welcome_lbl}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:14:17.198030" elapsed="0.273162"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:17.490888" level="INFO">Current page contains text 'Welcome Hermoine Granger'.</msg>
+<arg>Welcome ${user}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-07T20:14:17.471476" elapsed="0.019562"/>
+</kw>
+<arg>Hermoine Granger</arg>
+<doc>To Navigate to customer login page as select user provided as parameter</doc>
+<status status="PASS" start="2025-09-07T20:14:16.384863" elapsed="1.106344"/>
+</kw>
+<kw name="Select Customer Account">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:17.492238" level="INFO">Selecting options from selection list 'css:select[ng-model='accountNo']' by label 1003.</msg>
+<arg>${bankCustomer_selectAccount_dropdown}</arg>
+<arg>${account}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-09-07T20:14:17.491985" elapsed="0.158424"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:14:17.651023" level="INFO">1003</msg>
+<arg>${account}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:14:17.650736" elapsed="0.000390"/>
+</kw>
+<arg>1003</arg>
+<doc>Select Customer Account provided as parameter</doc>
+<status status="PASS" start="2025-09-07T20:14:17.491661" elapsed="0.159614"/>
+</kw>
+<kw name="Perform Transaction Credit Account">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:17.652337" level="INFO">Clicking element 'css:button[ng-click='deposit()']'.</msg>
+<arg>${bankCustomer_custDeposit_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:17.652090" elapsed="0.116254"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankCustomer_amount_txt}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:14:17.768559" elapsed="0.297697"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:18.067368" level="INFO">Typing text '50000' into text field 'css:input[ng-model='amount']'.</msg>
+<arg>${bankCustomer_amount_txt}</arg>
+<arg>${credit}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:18.066960" elapsed="0.164154"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:18.231778" level="INFO">Clicking element 'xpath://button[@type='submit' and text()='Deposit']'.</msg>
+<arg>${bankCustomer_custCredit_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:18.231410" elapsed="0.141295"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${bankCustomer_amount_txt}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:18.373002" elapsed="0.071033"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:14:18.444851" level="INFO">customer account credited successfully 50000</msg>
+<arg>customer account credited successfully ${credit}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:14:18.444247" elapsed="0.000745"/>
+</kw>
+<var name="${credit}">50000</var>
+<status status="PASS" start="2025-09-07T20:14:18.066756" elapsed="0.378549"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:18.447183" level="INFO">Typing text '5000' into text field 'css:input[ng-model='amount']'.</msg>
+<arg>${bankCustomer_amount_txt}</arg>
+<arg>${credit}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:18.446637" elapsed="0.139694"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:18.587180" level="INFO">Clicking element 'xpath://button[@type='submit' and text()='Deposit']'.</msg>
+<arg>${bankCustomer_custCredit_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:18.586714" elapsed="0.116477"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${bankCustomer_amount_txt}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:18.703468" elapsed="0.070121"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:14:18.773987" level="INFO">customer account credited successfully 5000</msg>
+<arg>customer account credited successfully ${credit}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:14:18.773792" elapsed="0.000252"/>
+</kw>
+<var name="${credit}">5000</var>
+<status status="PASS" start="2025-09-07T20:14:18.446384" elapsed="0.327709"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:18.774628" level="INFO">Typing text '1500' into text field 'css:input[ng-model='amount']'.</msg>
+<arg>${bankCustomer_amount_txt}</arg>
+<arg>${credit}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:18.774409" elapsed="0.146543"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:18.921644" level="INFO">Clicking element 'xpath://button[@type='submit' and text()='Deposit']'.</msg>
+<arg>${bankCustomer_custCredit_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:18.921248" elapsed="0.104315"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${bankCustomer_amount_txt}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:19.025758" elapsed="0.068767"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:14:19.094891" level="INFO">customer account credited successfully 1500</msg>
+<arg>customer account credited successfully ${credit}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:14:19.094709" elapsed="0.000237"/>
+</kw>
+<var name="${credit}">1500</var>
+<status status="PASS" start="2025-09-07T20:14:18.774306" elapsed="0.320692"/>
+</iter>
+<var>${credit}</var>
+<value>50000</value>
+<value>5000</value>
+<value>1500</value>
+<status status="PASS" start="2025-09-07T20:14:18.066437" elapsed="1.028735"/>
+</for>
+<doc>Customer Account credited</doc>
+<status status="PASS" start="2025-09-07T20:14:17.651789" elapsed="1.443810"/>
+</kw>
+<kw name="Perform Transaction Debit Account">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:19.097811" level="INFO">Clicking element 'css:button[ng-click='withdrawl()']'.</msg>
+<arg>${bankCustomer_custWithdrawal_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:19.096943" elapsed="0.127042"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankCustomer_amount_txt}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:14:19.224288" elapsed="0.036979"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:19.262361" level="INFO">Typing text '3000' into text field 'css:input[ng-model='amount']'.</msg>
+<arg>${bankCustomer_amount_txt}</arg>
+<arg>${debit}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:19.261720" elapsed="0.165605"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankCustomer_custDebit_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:14:19.427527" elapsed="0.289004"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:19.717278" level="INFO">Clicking element 'xpath://button[@type='submit' and text()='Withdraw']'.</msg>
+<arg>${bankCustomer_custDebit_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:19.716882" elapsed="0.132819"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${bankCustomer_amount_txt}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:19.850065" elapsed="0.080002"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:14:19.930662" level="INFO">customer account debited successfully 3000</msg>
+<arg>customer account debited successfully ${debit}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:14:19.930353" elapsed="0.000409"/>
+</kw>
+<var name="${debit}">3000</var>
+<status status="PASS" start="2025-09-07T20:14:19.261592" elapsed="0.669274"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:19.931535" level="INFO">Typing text '2000' into text field 'css:input[ng-model='amount']'.</msg>
+<arg>${bankCustomer_amount_txt}</arg>
+<arg>${debit}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:19.931249" elapsed="0.133035"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankCustomer_custDebit_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:14:20.064630" elapsed="0.023077"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:20.088402" level="INFO">Clicking element 'xpath://button[@type='submit' and text()='Withdraw']'.</msg>
+<arg>${bankCustomer_custDebit_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:20.087976" elapsed="0.150600"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${bankCustomer_amount_txt}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:20.238817" elapsed="0.064209"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:14:20.303472" level="INFO">customer account debited successfully 2000</msg>
+<arg>customer account debited successfully ${debit}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:14:20.303264" elapsed="0.000277"/>
+</kw>
+<var name="${debit}">2000</var>
+<status status="PASS" start="2025-09-07T20:14:19.931114" elapsed="0.372490"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:20.304175" level="INFO">Typing text '10000' into text field 'css:input[ng-model='amount']'.</msg>
+<arg>${bankCustomer_amount_txt}</arg>
+<arg>${debit}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:20.303891" elapsed="0.135841"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankCustomer_custDebit_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:14:20.439928" elapsed="0.025789"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:20.466408" level="INFO">Clicking element 'xpath://button[@type='submit' and text()='Withdraw']'.</msg>
+<arg>${bankCustomer_custDebit_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:20.466030" elapsed="0.090418"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${bankCustomer_amount_txt}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:20.556637" elapsed="0.066608"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:14:20.623636" level="INFO">customer account debited successfully 10000</msg>
+<arg>customer account debited successfully ${debit}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:14:20.623447" elapsed="0.000248"/>
+</kw>
+<var name="${debit}">10000</var>
+<status status="PASS" start="2025-09-07T20:14:20.303770" elapsed="0.319979"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:20.624262" level="INFO">Typing text '15000' into text field 'css:input[ng-model='amount']'.</msg>
+<arg>${bankCustomer_amount_txt}</arg>
+<arg>${debit}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:20.624030" elapsed="0.130061"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankCustomer_custDebit_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:14:20.754314" elapsed="0.029862"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:14:20.784870" level="INFO">Clicking element 'xpath://button[@type='submit' and text()='Withdraw']'.</msg>
+<arg>${bankCustomer_custDebit_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:20.784485" elapsed="0.084170"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${bankCustomer_amount_txt}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:14:20.868944" elapsed="0.059308"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:14:20.928812" level="INFO">customer account debited successfully 15000</msg>
+<arg>customer account debited successfully ${debit}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:14:20.928564" elapsed="0.000357"/>
+</kw>
+<var name="${debit}">15000</var>
+<status status="PASS" start="2025-09-07T20:14:20.623917" elapsed="0.305086"/>
+</iter>
+<var>${debit}</var>
+<value>3000</value>
+<value>2000</value>
+<value>10000</value>
+<value>15000</value>
+<status status="PASS" start="2025-09-07T20:14:19.261388" elapsed="1.667700"/>
+</for>
+<doc>Customer Account debited</doc>
+<status status="PASS" start="2025-09-07T20:14:19.096376" elapsed="1.832836"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T20:14:20.930096" elapsed="2.297952"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:14:20.929812" elapsed="2.298942"/>
+</kw>
+<doc>Test case is to login as customer provided as parameter</doc>
+<tag>Regression</tag>
+<status status="PASS" start="2025-09-07T20:14:10.585243" elapsed="12.644797"/>
+</test>
+<doc>Enter user to login and perform debit and credit transactions</doc>
+<status status="PASS" start="2025-09-07T20:14:10.556398" elapsed="12.678722"/>
+</suite>
+<status status="PASS" start="2025-09-07T20:10:44.519820" elapsed="218.721827"/>
+</suite>
+<statistics>
+<total>
+<stat pass="13" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="9" fail="0" skip="0">Regression</stat>
+<stat pass="4" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="13" fail="0" skip="0">Tests</stat>
+<stat name="Q1 0 Validate all webpages are loaded" id="s1-s1" pass="4" fail="0" skip="0">Tests.Q1 0 Validate all webpages are loaded</stat>
+<stat name="Q1 1 Create customers as bank manager" id="s1-s2" pass="7" fail="0" skip="0">Tests.Q1 1 Create customers as bank manager</stat>
+<stat name="Q1 2 Delete customers as bank manager" id="s1-s3" pass="1" fail="0" skip="0">Tests.Q1 2 Delete customers as bank manager</stat>
+<stat name="Q2 Login as user and perform transactions" id="s1-s4" pass="1" fail="0" skip="0">Tests.Q2 Login as user and perform transactions</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

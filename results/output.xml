@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-09-07T23:08:54.877334" rpa="false" schemaversion="5">
+<suite id="s1" name="XYZ Bank" source="C:\Users\Hamayoon\PycharmProjects\XYZ_Bank">
+<suite id="s1-s1" name="Tests" source="C:\Users\Hamayoon\PycharmProjects\XYZ_Bank\Tests">
+<suite id="s1-s1-s1" name="Q1 0 Validate all webpages are loaded" source="C:\Users\Hamayoon\PycharmProjects\XYZ_Bank\Tests\Q1_0_Validate_all_webpages_are_loaded.robot">
+<test id="s1-s1-s1-t1" name="Validate HomePage is Loaded (TC001)" line="14">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T23:08:55.736780" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T23:08:55.736532" elapsed="3.065483"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T23:08:58.802605" elapsed="0.156520"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T23:08:58.960349" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T23:08:58.959910" elapsed="0.893579"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T23:09:02.875121" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T23:08:59.853836" elapsed="3.021449"/>
+</kw>
+<status status="PASS" start="2025-09-07T23:08:55.735520" elapsed="7.139957"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${verifyHomePageIsLoaded}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T23:09:03.081743" elapsed="0.393968"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T23:09:03.476482" level="INFO">WebPage is loaded successfully</msg>
+<arg>WebPage is loaded successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T23:09:03.476225" elapsed="0.000358"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T23:09:03.477769" elapsed="2.685885"/>
+</kw>
+<status status="PASS" start="2025-09-07T23:09:03.477204" elapsed="2.687571"/>
+</kw>
+<doc>To Validate "Home Page" is loaded successfully</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-09-07T23:08:55.733973" elapsed="10.432957"/>
+</test>
+<test id="s1-s1-s1-t2" name="Validate Successful login as Bank Manager (TC002)" line="20">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T23:09:06.182427" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T23:09:06.181546" elapsed="2.420466"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T23:09:08.602356" elapsed="0.148904"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T23:09:08.751853" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T23:09:08.751556" elapsed="0.759177"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T23:09:12.511976" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T23:09:09.511059" elapsed="3.001063"/>
+</kw>
+<status status="PASS" start="2025-09-07T23:09:06.178712" elapsed="6.333572"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T23:09:12.513197" level="INFO">Clicking element 'css:button[ng-click='manager()']'.</msg>
+<arg>${bankManager_login_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T23:09:12.512917" elapsed="0.139009"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${verifyHomePageIsLoaded}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T23:09:12.652398" elapsed="0.038026"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_addCustomer_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T23:09:12.690937" elapsed="0.249103"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T23:09:12.940756" level="INFO">WebPage is loaded successfully</msg>
+<arg>WebPage is loaded successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T23:09:12.940576" elapsed="0.000271"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T23:09:12.941883" elapsed="2.247889"/>
+</kw>
+<status status="PASS" start="2025-09-07T23:09:12.941433" elapsed="2.248946"/>
+</kw>
+<doc>To Validate "Bank Manager" logged-in successfully</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-09-07T23:09:06.171390" elapsed="9.020351"/>
+</test>
+<test id="s1-s1-s1-t3" name="Validate Customer Tab is loaded as Bank Manager (TC003)" line="28">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T23:09:15.201140" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T23:09:15.200425" elapsed="2.279557"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T23:09:17.480288" elapsed="0.334153"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T23:09:17.815012" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T23:09:17.814770" elapsed="1.116301"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T23:09:21.931899" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T23:09:18.931446" elapsed="3.000572"/>
+</kw>
+<status status="PASS" start="2025-09-07T23:09:15.198869" elapsed="6.733315"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T23:09:21.933612" level="INFO">Clicking element 'css:button[ng-click='manager()']'.</msg>
+<arg>${bankManager_login_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T23:09:21.933180" elapsed="0.137622"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${verifyHomePageIsLoaded}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T23:09:22.071339" elapsed="0.035468"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_showCustomers_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T23:09:22.107327" elapsed="0.246182"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T23:09:22.354444" level="INFO">Clicking element 'css:button[ng-click='showCust()']'.</msg>
+<arg>${bankManager_showCustomers_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T23:09:22.354185" elapsed="0.142926"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_custDetail_tbl}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T23:09:22.497562" elapsed="0.289540"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T23:09:22.787724" level="INFO">WebPage is loaded successfully</msg>
+<arg>WebPage is loaded successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T23:09:22.787574" elapsed="0.000204"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T23:09:22.788911" elapsed="3.269407"/>
+</kw>
+<status status="PASS" start="2025-09-07T23:09:22.788526" elapsed="3.269988"/>
+</kw>
+<doc>To Validate "Customer Tab" screen loaded successfully</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-09-07T23:09:15.195787" elapsed="10.863168"/>
+</test>
+<test id="s1-s1-s1-t4" name="Validate Customer Login page is loaded (TC004)" line="38">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T23:09:26.061481" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T23:09:26.061341" elapsed="3.646264"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T23:09:29.707989" elapsed="0.219389"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T23:09:29.927976" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T23:09:29.927668" elapsed="0.971278"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T23:09:33.899959" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T23:09:30.899225" elapsed="3.000875"/>
+</kw>
+<status status="PASS" start="2025-09-07T23:09:26.061016" elapsed="7.839206"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${verifyHomePageIsLoaded}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T23:09:33.900833" elapsed="0.039315"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Customer_login_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T23:09:33.940653" elapsed="0.031127"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T23:09:33.972825" level="INFO">Clicking element 'css:button[ng-click='customer()']'.</msg>
+<arg>${Customer_login_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T23:09:33.972454" elapsed="0.121720"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankCustomer_selectUser_dropdown}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T23:09:34.094698" elapsed="0.332643"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-07T23:09:34.452510" level="INFO">Current page contains text 'Your Name :'.</msg>
+<arg>Your Name :</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-07T23:09:34.427845" elapsed="0.024786"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T23:09:34.453918" level="INFO">WebPage is loaded successfully</msg>
+<arg>WebPage is loaded successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T23:09:34.453373" elapsed="0.000623"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T23:09:34.454757" elapsed="2.560732"/>
+</kw>
+<status status="PASS" start="2025-09-07T23:09:34.454440" elapsed="2.561309"/>
+</kw>
+<doc>To Validate "Customer Login" screen loaded successfully</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-09-07T23:09:26.060082" elapsed="10.956277"/>
+</test>
+<doc>To validate all webpages are loaded for smoke test</doc>
+<status status="PASS" start="2025-09-07T23:08:54.935116" elapsed="42.083315"/>
+</suite>
+<suite id="s1-s1-s2" name="Q1 1 Create customers as bank manager" source="C:\Users\Hamayoon\PycharmProjects\XYZ_Bank\Tests\Q1_1_Create_customers_as_bank_manager.robot">
+<test id="s1-s1-s2-t1" name="Enter First Customer" line="17">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T23:09:37.044288" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-09-07T23:09:42.954475" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-09-07T23:09:37.044009" elapsed="5.910603">Execution terminated by signal</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-09-07T23:09:42.954870" elapsed="0.000060"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-09-07T23:09:42.955078" elapsed="0.000044"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-09-07T23:09:42.955269" elapsed="0.000043"/>
+</kw>
+<status status="FAIL" start="2025-09-07T23:09:37.043204" elapsed="5.912319">Execution terminated by signal</status>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T23:09:42.956688" elapsed="0.000192"/>
+</kw>
+<status status="PASS" start="2025-09-07T23:09:42.956271" elapsed="0.000724"/>
+</kw>
+<tag>Regression</tag>
+<status status="FAIL" start="2025-09-07T23:09:37.042209" elapsed="5.915038">Setup failed:
+Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s2-t2" name="Enter Second Customer" line="18">
+<tag>Regression</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-09-07T23:09:42.958149" elapsed="0.000521">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s2-t3" name="Enter Third Customer" line="19">
+<tag>Regression</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-09-07T23:09:42.959485" elapsed="0.000524">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s2-t4" name="Enter Fourth Customer" line="20">
+<tag>Regression</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-09-07T23:09:42.960945" elapsed="0.000870">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s2-t5" name="Enter Fifth Customer" line="21">
+<tag>Regression</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-09-07T23:09:42.963109" elapsed="0.000878">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s2-t6" name="Enter Sixth Customer" line="22">
+<tag>Regression</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-09-07T23:09:42.964961" elapsed="0.000528">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s2-t7" name="Enter Seventh Customer" line="23">
+<tag>Regression</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-09-07T23:09:42.967641" elapsed="0.000804">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>To add customer data as "BankManager"</doc>
+<status status="FAIL" start="2025-09-07T23:09:37.021730" elapsed="5.947631"/>
+</suite>
+<suite id="s1-s1-s3" name="Q1 2 Delete customers as bank manager" source="C:\Users\Hamayoon\PycharmProjects\XYZ_Bank\Tests\Q1_2_Delete_customers_as_bank_manager.robot">
+<test id="s1-s1-s3-t1" name="Validate customers details are deleted (TC001)" line="14">
+<doc>Test case is to delete customer data</doc>
+<tag>Regression</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-09-07T23:09:42.972191" elapsed="0.000541">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>To delete customer data as "BankManager"</doc>
+<status status="FAIL" start="2025-09-07T23:09:42.971142" elapsed="0.002368"/>
+</suite>
+<suite id="s1-s1-s4" name="Q2 Login as user and perform transactions" source="C:\Users\Hamayoon\PycharmProjects\XYZ_Bank\Tests\Q2_Login_as_user_and_perform_transactions.robot">
+<test id="s1-s1-s4-t1" name="User login and perform Debit/Credit Account (TC001)" line="15">
+<doc>Test case is to login as customer provided as parameter</doc>
+<tag>Regression</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-09-07T23:09:42.975255" elapsed="0.000870">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Enter user to login and perform debit and credit transactions</doc>
+<status status="FAIL" start="2025-09-07T23:09:42.974464" elapsed="0.002871"/>
+</suite>
+<status status="FAIL" start="2025-09-07T23:08:54.933101" elapsed="48.046780"/>
+</suite>
+<status status="FAIL" start="2025-09-07T23:08:54.880083" elapsed="48.102178"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="9" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat info="combined" combined="NOT robot:exit" pass="4" fail="1" skip="0">NOT robot:exit</stat>
+<stat pass="0" fail="9" skip="0">Regression</stat>
+<stat pass="4" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat name="XYZ Bank" id="s1" pass="4" fail="9" skip="0">XYZ Bank</stat>
+<stat name="Tests" id="s1-s1" pass="4" fail="9" skip="0">XYZ Bank.Tests</stat>
+<stat name="Q1 0 Validate all webpages are loaded" id="s1-s1-s1" pass="4" fail="0" skip="0">XYZ Bank.Tests.Q1 0 Validate all webpages are loaded</stat>
+<stat name="Q1 1 Create customers as bank manager" id="s1-s1-s2" pass="0" fail="7" skip="0">XYZ Bank.Tests.Q1 1 Create customers as bank manager</stat>
+<stat name="Q1 2 Delete customers as bank manager" id="s1-s1-s3" pass="0" fail="1" skip="0">XYZ Bank.Tests.Q1 2 Delete customers as bank manager</stat>
+<stat name="Q2 Login as user and perform transactions" id="s1-s1-s4" pass="0" fail="1" skip="0">XYZ Bank.Tests.Q2 Login as user and perform transactions</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

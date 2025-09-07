@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-09-07T20:01:42.570108" rpa="false" schemaversion="5">
+<suite id="s1" name="Q1 2 Delete customers as bank manager" source="C:\Users\Hamayoon\PycharmProjects\XYZ_Bank\tests\Q1_2_Delete_customers_as_bank_manager.robot">
+<test id="s1-t1" name="Validate customers details are deleted (TC001)" line="14">
+<kw name="Login HomePage" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:01:43.197712" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-09-07T20:01:43.197513" elapsed="2.287554"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-07T20:01:45.485485" elapsed="0.181231"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:01:45.668799" level="INFO">Opening url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-09-07T20:01:45.667608" elapsed="1.089269"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:01:49.758196" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:01:46.757627" elapsed="3.000769"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:01:43.196567" elapsed="6.562068"/>
+</kw>
+<kw name="Login and navigate to customer display page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:01:49.760815" level="INFO">Clicking element 'css:button[ng-click='manager()']'.</msg>
+<arg>${bankManager_login_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:01:49.759782" elapsed="0.141096"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_showCustomers_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:01:49.901338" elapsed="0.496708"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:01:50.398554" level="INFO">Clicking element 'css:button[ng-click='showCust()']'.</msg>
+<arg>${bankManager_showCustomers_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:01:50.398295" elapsed="0.109739"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_custDetail_tbl}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:01:50.508242" elapsed="0.352054"/>
+</kw>
+<doc>To Navigate to customer display page as "Bank Manager"</doc>
+<status status="PASS" start="2025-09-07T20:01:49.759347" elapsed="1.101168"/>
+</kw>
+<kw name="Search and delete customer details">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_searchCust_txt}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:01:50.862111" elapsed="0.043917"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${bankManager_custDetail_tbl}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T20:01:50.906353" elapsed="0.025937"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:01:50.933571" level="INFO">Typing text 'Hermoine' into text field 'css:input[ng-model='searchCustomer']'.</msg>
+<arg>${bankManager_searchCust_txt}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:01:50.933138" elapsed="0.204571"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:01:52.139336" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:01:51.138050" elapsed="1.001819"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:01:52.222679" level="INFO">Current page contains text 'Hermoine'.</msg>
+<arg>${name}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-07T20:01:52.143095" elapsed="0.079754"/>
+</kw>
+<msg time="2025-09-07T20:01:52.223183" level="INFO">${found} = True</msg>
+<var>${found}</var>
+<arg>Page Should Contain</arg>
+<arg>${name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-09-07T20:01:52.141367" elapsed="0.081880"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${found}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2025-09-07T20:01:52.223612" elapsed="0.000682"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:01:52.224933" level="INFO">Clicking button 'css:button[ng-click='deleteCust(cust)']'.</msg>
+<arg>${bankManager_deleteCust_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:01:52.224550" elapsed="0.134872"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:01:55.360337" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:01:52.359771" elapsed="3.000742"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${bankManager_searchCust_txt}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:01:55.360863" elapsed="0.206491"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:01:56.568629" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:01:55.567678" elapsed="1.001144"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:01:56.569593" level="INFO">customer deleted successfully Hermoine</msg>
+<arg>customer deleted successfully ${name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:01:56.569175" elapsed="0.000513"/>
+</kw>
+<var name="${name}">Hermoine</var>
+<status status="PASS" start="2025-09-07T20:01:50.932910" elapsed="5.636885"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:01:56.571017" level="INFO">Typing text 'Harry' into text field 'css:input[ng-model='searchCustomer']'.</msg>
+<arg>${bankManager_searchCust_txt}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:01:56.570555" elapsed="0.209884"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:01:57.781982" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:01:56.780750" elapsed="1.001704"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:01:57.840847" level="INFO">Current page contains text 'Harry'.</msg>
+<arg>${name}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-07T20:01:57.784131" elapsed="0.056844"/>
+</kw>
+<msg time="2025-09-07T20:01:57.841177" level="INFO">${found} = True</msg>
+<var>${found}</var>
+<arg>Page Should Contain</arg>
+<arg>${name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-09-07T20:01:57.783249" elapsed="0.057972"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${found}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2025-09-07T20:01:57.841641" elapsed="0.000446"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:01:57.842532" level="INFO">Clicking button 'css:button[ng-click='deleteCust(cust)']'.</msg>
+<arg>${bankManager_deleteCust_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:01:57.842268" elapsed="0.135229"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:02:00.978468" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:01:57.977697" elapsed="3.001057"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${bankManager_searchCust_txt}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:02:00.979117" elapsed="0.064023"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:02:02.044156" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:02:01.043447" elapsed="1.000875"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T20:02:02.044805" level="INFO">customer deleted successfully Harry</msg>
+<arg>customer deleted successfully ${name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T20:02:02.044565" elapsed="0.000343"/>
+</kw>
+<var name="${name}">Harry</var>
+<status status="PASS" start="2025-09-07T20:01:56.570245" elapsed="5.474752"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:02:02.045654" level="INFO">Typing text 'Christopher' into text field 'css:input[ng-model='searchCustomer']'.</msg>
+<arg>${bankManager_searchCust_txt}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T20:02:02.045392" elapsed="0.162137"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T20:02:03.208524" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T20:02:02.207759" elapsed="1.000912"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-07T20:02:03.398953" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-07T20:02:03.399236" level="FAIL">Page should have contained text 'Christopher' but did not.</msg>
+<arg>${name}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-09-07T20:02:03.209245" elapsed="0.194551">Page should have contained text 'Christopher' but did not.</status>
+</kw>
+<msg time="2025-09-07T20:02:03.404162" level="INFO">${found} = False</msg>
+<var>${found}</var>
+<arg>Page Should Contain</arg>
+<arg>${name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-09-07T20:02:03.208910" elapsed="0.195317"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<msg time="2025-09-07T20:02:03.405179" level="INFO">Exiting for loop altogether.</msg>
+<arg>'${found}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2025-09-07T20:02:03.404554" elapsed="0.000790"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${bankManager_deleteCust_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-09-07T20:02:03.405649" elapsed="0.000188"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-09-07T20:02:03.406170" elapsed="0.000083"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${bankManager_searchCust_txt}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-09-07T20:02:03.406501" elapsed="0.000068"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-09-07T20:02:03.406805" elapsed="0.000074"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>customer deleted successfully ${name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-07T20:02:03.407191" elapsed="0.000123"/>
+</kw>
+<var name="${name}">Christopher</var>
+<status status="PASS" start="2025-09-07T20:02:02.045215" elapsed="1.362214"/>
+</iter>
+<var>${name}</var>
+<value>Hermoine</value>
+<value>Harry</value>
+<value>Christopher</value>
+<status status="PASS" start="2025-09-07T20:01:50.932491" elapsed="12.475073"/>
+</for>
+<doc>To delete customers data</doc>
+<status status="PASS" start="2025-09-07T20:01:50.861799" elapsed="12.546021"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T20:02:03.409157" elapsed="2.891340"/>
+</kw>
+<status status="PASS" start="2025-09-07T20:02:03.408490" elapsed="2.892208"/>
+</kw>
+<doc>Test case is to delete customer data</doc>
+<tag>Regression</tag>
+<status status="PASS" start="2025-09-07T20:01:43.195472" elapsed="23.105937"/>
+</test>
+<doc>To delete customer data</doc>
+<status status="PASS" start="2025-09-07T20:01:42.572501" elapsed="23.730152"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat name="Q1 2 Delete customers as bank manager" id="s1" pass="1" fail="0" skip="0">Q1 2 Delete customers as bank manager</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
