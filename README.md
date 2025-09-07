@@ -8,10 +8,11 @@ This project contains Robot Framework + Selenium automation tests for the XYZ Ba
 - Test execution and report integration using PyCharm
 
 ## Key Features
-- Generic resource files for generic reusable keywords, URL's, locator and test steps
+- Generic resource file for generic reusable keywords, URL's, locator and test steps
 - Page Object Model (POM) style separation of page-specific locators and actions
-- Custom keywords
+- User friendly keywords
 - Tagging to organize and selectively run smoke and regression
+- Organized the project with clear directory structure
 
 ## How to Run
 - goto project directory ..\XYZ_Bank>
