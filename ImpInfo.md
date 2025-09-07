@@ -1,5 +1,5 @@
 ## XYZ Bank Automation Project
-This project contains Robot Framework + Selenium automation tests** for the XYZ Bank demo application.
+This project contains Robot Framework + Selenium automation tests for the XYZ Bank demo application.
 
 ## Tools & Technologies
 - Python 
